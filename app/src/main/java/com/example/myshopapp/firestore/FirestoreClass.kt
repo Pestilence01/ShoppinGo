@@ -28,7 +28,7 @@ class FirestoreClass {
         mFireStore.collection(Constants.USERS)
             .document(userInfo.id)
             .set(userInfo, SetOptions.merge())
-            .addOnSuccessListener {
+            .addOnSuccessListener { _: Void? ->
                 activity.userRegistrationSuccess()
             }
             .addOnFailureListener { e ->
