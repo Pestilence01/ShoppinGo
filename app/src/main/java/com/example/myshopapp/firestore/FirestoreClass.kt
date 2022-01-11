@@ -537,7 +537,7 @@ class FirestoreClass {
         mFireStore.collection(Constants.PRODUCTS)
             .document()
             .set(productInfo, SetOptions.merge())
-            .addOnSuccessListener {
+            .addOnSuccessListener { _: Void? ->
                 activity.productUploadSuccess()
             }
             .addOnFailureListener { e ->
